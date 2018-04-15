@@ -1,0 +1,87 @@
+
+@font-face{
+	font-family: 'byekan';
+	src: url(../fonts/BYekan.eot) format('eot'),
+		url(../fonts/BYekan.ttf) format('ttf'),
+		url(../fonts/BYekan.woff) format('woff');
+}
+
+body {
+    width: 980px;
+    direction: rtl;
+    margin: 0 auto;
+    font-family: byekan ;
+  }
+ 
+  .topnav {
+    direction: rtl;
+    list-style-type: none;
+    margin: 20px auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #cacaca;
+  }
+  .topnav img{
+    float:right;
+    width: 90px;
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+
+  .topnav a {
+    float: right;
+    color: #611919;
+    text-align: center;
+    padding: 14px 36px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav  #active{
+  background-color: #32e4cc;
+}
+  .topnav a:hover {
+    background-color: #252222;
+    color: white;
+  }
+  a.login {
+      float: left;
+  }
+header{
+  width: 980px;
+  margin:10px auto 0;
+}
+header .siteHeader{
+  width: 750px;
+  height: 400px;
+  float: right;
+}
+header div img{
+  width: 750px;
+  height: 400px;
+}
+header .socials{
+  background-color: #611919;
+  width: 200px;
+  height: 400px;
+  float: left;
+}
+.socials h3{
+  text-align: center;
+}
+ .socials ul{
+   float: left;
+   list-style-type: none;
+    margin-top:1px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.socials ul li a{
+  display: block; 
+}
+.socials img{
+  width: 80px;
+  height: 80px;
+  margin-top: 3px;
+ 
+}
