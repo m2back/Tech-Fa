@@ -204,21 +204,6 @@ li.socialLi{
   position: absolute;
   text-decoration: none;
 }
-/*
-.followUs{
-  font-size: 35px;
-  direction: rtl;
-  float: right;
-  padding-left: 135;
-}
-
-.followUsIcon{
-  direction: rtl;
-  padding-top: 23;
-  padding-right: 0;
-  padding-left: 380;
-}
-*/
 
 footer{
   width: 100%;
@@ -282,7 +267,7 @@ aside{
 section div p{
   width: 450px;
   margin-right: 45px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 35px;
 }
 section div h2{
