@@ -1,38 +1,276 @@
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="keywords" content="Technology, IT">
-  <link rel="stylesheet" href="style/style.css">
-  <title>Tech-Fa</title>
+  <link rel="stylesheet" href="./style/style.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+  @font-face {
+      font-family:'BNazanin';
+      src:url('./fonts/BNazanin.eot');
+      src:local('BNazanin'),
+          local('b Nazanin'),
+          url('./fonts/BNazanin.eot?#iefix') format('embedded-opentype'),
+          url('./fonts/BNazanin.woff') format('woff'),
+          url('./fonts/BNazanin.ttf') format('truetype'),
+          url('./fonts/BNazanin.svg#BNazanin') format('svg');
+      font-style:normal;
+      font-weight:normal;
+  }
+  body {
+      font-family:BNazanin, Tahoma, Geneva, sans-serif;
+      direction: rtl;
+  }
+</style>
 </head>
 <body>
-  <!--navigation bar-->
-    <nav class="topnav">
-        <img src="./images/logo.png">
-        <a href="#home" id="active">صفحه اصلی</a>
-        <a href="#articles">مقالات</a>
-        <a href="#news">اخبار</a>
-        <a href="#mag">ماهنامه</a>
-        <a href="#shop">فروشگاه</a>
-        <a href="#signup" class="login">ثبت نام</a>
-        <a href="#login" class="login">ورود</a>
-    </nav>
-  <!--header-->
-  <header>
-    <div class="siteHeader">
-    <img src="images/hawking.png" alt="Site Header Picture" >
-    </div>
-    <div class="socials">
-      <h3>به دنبال ما باشید...</h3>
-          <ul>
-              <li><a href="#"><img src="images/telegram.png" alt="telegram"></a> </li>
-              <li><a href="#"><img src="images/instagram.png" alt="instagram"></a></li>
-              <li><a href="#"></a></li>
-            </ul>
+<div class="topnav">
+  <img src="./images/logo.png" width="90">
+  <a href="#home">صفحه اصلی</a>
+  <a href="#articles">مقالات</a>
+  <a href="#news">اخبار</a>
+  <a href="#mag">ماهنامه</a>
+  <a href="#shop">فروشگاه</a>
+
+  <a href="#signup" class="login">ثبت نام</a>
+  <a href="#login" class="login">ورود</a>
+</div>
+<div class="slideshowandsocial">
+
+
+
+    <div class="socialDiv">
+      <!--<img src="images/telegram.png" id="followUsIcon"><p class="followUs">به دنبال ما باشید</p>-->
+      <ul class="socialList">
+          <li class="socialLi" ><img src="images/telegram.png" id="socialIcon"><a style="color:#7aa5da" href="#" id="SocialTxt">Telegram</a></li>
+          <li class="socialLi"><img src="images/twitter.png" id="socialIcon"><a style="color:#3a7ca5" href="#" id="SocialTxt">Twitter</a></li>
+          <li class="socialLi"><img src="images/instagram.png" id="socialIcon"><a style="color:#6b28b3" href="#" id="SocialTxt">Instagram</a></li>
+          <li class="socialLi"><img src="images/facebook.png" id="socialIcon"><a style="color:#4d588f" href="#" id="SocialTxt">Facebook</a></li>
+          <li class="socialLi"><img src="images/youtube.png" id="socialIcon"><a style="color:#d22514" href="#" id="SocialTxt">Youtube</a></li>
+      </ul>
+
 
     </div>
-  </header>
+
+
+    <div class="slideShowDiv">
+    <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="./images/hawking.png" style="width:100%">
+      <div class="text">hawking</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="./images/androidappdevelop.png" style="width:100%">
+      <div class="text">Android Develoment</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="./images/arewemattere.png" style="width:100%">
+      <div class="text">Are We Mattere?</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="./images/javaprograming.png" style="width:100%">
+      <div class="text">Java Programing</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+    <div></div>
+    <br>
+
+    <div style="position: relative; left: 46%;">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    </div>
+
+
+    <section class="mainSubjet">
+        <div class="subject">
+          <img src="images/1.jpg" alt="">
+          <h2>نقد انیمیشن Early Man - انسان‌های اولیه</h2>
+          <p>انیمیشن انسان‌های اولیه که از صداپیشگان مطرحی مانند میسی ویلیامز، تام هیدلستون و ادی ردمین بهره می‌برد، اثری کلیشه‌ای اما بسیار سرگرم‌کننده است.</p>
+        </div>
+        <div class="subject">
+          <img src="images/2.jpg" alt="">
+          <h2>گوگل وان، نسخه ارزان‌تر سرویس ذخیره ابری گوگل درایو معرفی شد</h2>
+          <p>گوگل شب گذشته سرویس جدیدی با عنوان گوگل وان معرفی کرد که در واقع یک سرویس ذخیره‌ی ابری با تعرفه‌هایی ارزان‌تر از گوگل درایو است.</p>
+        </div>
+        <div class="subject">
+          <img src="images/3.jpg" alt="">
+          <h2>اچ پی از نسخه‌ جدید Envy 13 با پردازنده‌ کبی لیک ریفرش رونمایی کرد</h2>
+          <p>متن اصلیمتن اصلیمتن اصلیمتن اصلیمتن اصلیمتن اصلیمتن اصلیمتن اصلیمتن اصلیمتن اصلیمتن اصلیمتن اصلیاچ‌پی از لپ‌تاپ (HP Envy 13 (2018 با طراحی زیبا و ضخامت کم و پردازنده‌ی سری کبی‌لیک ریفرش رونمایی کرد.</p>
+        </div>
+        <div class="subject">
+          <img src="images/4.jpg" alt="">
+          <h2>پایان عصر هواپیماهای رادارگریز با ظهور رادارهای کوانتومی</h2>
+          <p>دولت کانادا بودجه ۲.۱ میلیون دلاری به ساخت رادارهای کوانتومی اختصاص داده است. </p>
+        </div>
+        <div class="subject">
+          <img src="images/5.jpg" alt="">
+          <h2>گفتگو با جو بلفیوره درباره‌ آینده‌ ویندوز</h2>
+          <p>به‌تازگی جو بلفیوره، مدیر بخش تجارب و دستگاه‌ها، گفتگویی انجام داده و در آن، آینده‌ی ویندوز را از چشم‌انداز مایکروسافت ترسیم کرده است.</p>
+        </div>
+        <div class="subject">
+          <img src="images/6.jpg" alt="">
+          <h2>پردازنده Wear 3100 کوالکام با پشتیبانی از فناوری ردیابی چشم معرفی می‌شود</h2>
+          <p>پردازنده Wear 3100 کوالکام با قابلیت پشتیبانی از فناوری ردیابی چشم مخصوص ساعت‌ هوشمند و گجت‌‌های پوشیدنی،‌ هدست‌ واقعیت مجازی و واقعیت افزوده، به‌زودی معرفی خواهد شد.</p>
+        </div>
+        <div class="subject">
+          <img src="images/7.jpg" alt="">
+          <h2>لزوم کاربرد موتور جستجوی بومی برای دستگاه های دولتی</h2>
+          <p>بر اساس گزارش معاون وزیر ارتباطات، دستورالعملی در حال تدوین است که در صورت تصویب هیئت وزیران، استفاده از موتور جستجوی بومی برای دستگاه‌های دولتی الزامی شود.</p>
+        </div>
+        <div class="subject">
+          <img src="images/8.jpg" alt="">
+          <h2>نسخه ال سی دی آیفون جدید در رنگ‌های آبی، زرد و صورتی راهی بازار می‌شود<</h2>
+          <p>جدیدترین گزارش‌ نشان از این دارد که نسخه‌ی مجهز به ال سی دی آیفون در رنگ‌های آبی، زرد و صورتی راهی بازار خواهد شد.</p>
+        </div>
+        <div class="subject">
+          <img src="images/9.jpg" alt="">
+          <h2>ترامپ درصدد تعلیق تحریم‌های زد تی ای است</h2>
+          <p>ترامپ، رئیس جمهور آمریکا به‌تازگی با انتشار توییتی اعلام کرده است که با همکاری رئیس جمهور چین تلاش دارد تحریم‌ها علیه شرکت مخابراتی زدتی‌ای را تعلیق کند..</p>
+        </div>
+        <div class="subject">
+          <img src="images/10.jpg" alt="">
+          <h2>نقد فیلم Red Sparrow - گنجشک سرخ</h2>
+          <p>فیلم Red Sparrow با بازی جنیفر لاورنس با اینکه از تبدیل شدن به یک فیلم جاسوسی تمام عیار باز می‌ماند، اما دارای نکات جالب و قابل تاملی است.</p>
+        </div>
+    </section>
+
+    <aside class="leftSideUp">
+        <h2>پربازدید ترین مطالب</h2>
+        <ul>
+          <li>مقایسه دوربین آيفون 10، گلکسی اس 9 پلاس، پی 20 پرو و وان‌پلاس 5T</li>
+          <li>انفجار ماشین لباسشویی سامسونگ در تگزاس آمریکا</li>
+          <li>بازگشت تحریم خودروسازی ایران نزدیک است</li>
+          <li>آیفون با سه لنز دوربین پشتی احتمالا سال آینده معرفی خواهد شد</li>
+          <li>قیمت اچ تی سی یو 12 پلاس دو هفته قبل از رونمایی فاش شد</li>
+          <li>چرا بریدگی آیفون 10 از گوشی‌های اندرویدی سر درآورده است</li>
+        </ul>
+    </aside>
+    <aside class="leftSideDown">
+      <h2 style="color:red">موضوعات سایت</h2>
+      <h2>اخبار</h2>
+      <ul>
+        <li>فناوری ایران</li>
+        <li>موبایل و تبلت</li>
+        <li>خودرو</li>
+        <li>هوش مصنوعی</li>
+        <li>نرم افزار</li>
+        <li>پوشیدنی ها</li>
+        <li>سخت افزار</li>
+        <li>واقعیت مجازی</li>
+        <li>امنیت</li>
+        <li>اینترنت اشیاء</li>
+        <li>دوربین</li>
+        <li>گجت</li>
+        </ul>
+        <h2>مقالات</h2>
+        <ul>
+          <li>بررسی موبایل</li>
+          <li>بررسی تبلت</li>
+          <li>بررسی لپ تاپ</li>
+          <li>بررسی هدفون</li>
+          <li>بررسی پوشیدنی ها</li>
+          <li>بررسی ویدیویی</li>
+          <li>مقالات نجوم شناسی</li>
+          <li>مقالات زیستی</li>
+          <li>مقالات خودرو</li>
+          <li>راهنمای خرید</li>
+          </ul>
+          <h2>فروشگاه</h2>
+          <h2>ماهنامه</h2>
+          <h2>تکفا</h2>
+          <ul>
+            <li>تماس با ما</li>
+            <li>درباره ما</li>
+          </ul>
+    </aside>
+
+    <div class="page">
+      <p>Page:<img src="images/left.png" alt="leftArrow">        1     2     3     ...     455     <img src="images/right.png">          <img src="images/too_right.png"></p>
+
+    </div>
+
+    <footer>
+      <div class="footerSarTitr">
+          <ul class="footerSarTitr">
+            <li>تماس با ما</li>
+            <li>درباره ما</li>
+            <li>آمار سایت</li>
+            <li>  </li>
+          </ul>
+      </div>
+      <div class="footerSarTitr">
+          <ul class="footerSarTitr">
+            <li>بررسی تخصصی</li>
+            <li>ویدیو ها</li>
+            <li>  </li>
+            <li>  </li>
+          </ul>
+      </div>
+        <div class="footerSarTitr">
+            <ul class="footerSarTitr">
+              <li>پربازدید ترین ها</li>
+              <li>پر بحث ترین ها</li>
+              <li>در حال پیشرفت</li>
+              <li>  </li>
+            </ul>
+        </div>
+        <div class="footerSarTitr">
+            <ul class="footerSarTitr">
+              <li>اخبار</li>
+              <li>مقالات</li>
+              <li>فروشگاه سایت</li>
+              <li>ماهنامه سایت</li>
+            </ul>
+        </div>
+        <p> © کپی بخش یا کل هر کدام از مطالب تکفا تنها با کسب مجوز مکتوب امکان پذیر است </p>
+    </footer>
+
+
+
+
+
+</div>
 </body>
 </html>
